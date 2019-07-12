@@ -13,7 +13,7 @@ void FullCountingSort::solution(vector<vector<string>> arr)
 	}
 
 	for (string s : num) {
-		cout << s << " ";
+		cout << s;
 	}
 
 	cout << endl;
