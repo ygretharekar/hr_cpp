@@ -2,9 +2,17 @@
 //
 
 #include <iostream>
+#include "FullCountingSort.h"
 
 int main()
 {
+	FullCountingSort f = FullCountingSort();
+
+	vector<vector<string>> arr{ vector<string>{"1", "a"}, vector<string>{"2", "a"}, vector<string>{"3", "c"},
+		vector<string>{"4", "b"}, vector<string>{"1", "c"} };
+
+	f.solution(arr);
+
     std::cout << "Hello World!\n";
 }
 
