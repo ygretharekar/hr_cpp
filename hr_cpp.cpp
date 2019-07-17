@@ -2,16 +2,15 @@
 //
 
 #include <iostream>
-#include "FullCountingSort.h"
+#include "FraudulentActivityNotifier.h"
 
 int main()
 {
-	FullCountingSort f = FullCountingSort();
+	FraudulentActivityNotifier fan = FraudulentActivityNotifier();
 
-	vector<vector<string>> arr{ vector<string>{"1", "a"}, vector<string>{"2", "a"}, vector<string>{"3", "c"},
-		vector<string>{"4", "b"}, vector<string>{"1", "c"} };
+	std::vector<int> inp{10, 20, 30, 40, 50};
 
-	f.solution(arr);
+	cout << fan.activityNotifications(inp, 3) << std::endl;
 
     std::cout << "Hello World!\n";
 }
