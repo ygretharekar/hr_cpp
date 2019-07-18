@@ -26,21 +26,21 @@ int FraudulentActivityNotifier::activityNotifications(vector<int> expenditure, i
 	{
 		size_t j = 0;
 		double tmp;
-		for (j = 0; j < 201 && arr[j] < d / 2; j++);
+		for (j = 0; j < 201 && arr[j] <= d / 2; j++);
 
-		if (arr[j] == d / 2) {
-			tmp = j + 1;
+		if ( j > 0 && arr[j - 1] == d / 2) {
+			tmp = j;
 			if (d % 2 == 0) {
-				tmp += j;
+				tmp += j - 1;
 				tmp /= 2;
 			}
 		}
 		else {
 			tmp = j;
-			if (d % 2 == 0 && j > 0) {
+			/*if (d % 2 == 0 && j > 0) {
 				tmp += arr[j - 1] + 1 == arr[j] ? j - 1: j;
 				tmp /= 2;
-			}
+			}*/
 		}
 
 		tmp *= 2;
