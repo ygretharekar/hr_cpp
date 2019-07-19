@@ -24,12 +24,18 @@
     <ClCompile Include="FraudulentActivityNotifier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LilysHomework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FullCountingSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FraudulentActivityNotifier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LilysHomework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
