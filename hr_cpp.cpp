@@ -2,15 +2,15 @@
 //
 
 #include <iostream>
-#include "FraudulentActivityNotifier.h"
+#include "LilysHomework.h"
 
 int main()
 {
-	FraudulentActivityNotifier fan = FraudulentActivityNotifier();
+	LilysHomework sol = LilysHomework();
 
-	std::vector<int> inp{10, 20, 30, 40, 50};
+	std::vector<int> inp{2, 5, 3, 1};
 
-	cout << fan.activityNotifications(inp, 3) << std::endl;
+	cout << sol.lilysHomework(inp) << std::endl;
 
     std::cout << "Hello World!\n";
 }
