@@ -26,18 +26,12 @@ int LilysHomework::lilysHomework(vector<int> arr)
 		return -1;
 	};
 
-	for (int i = 0; i < arr.size(); i++)
-	{
-		dscCount += abs(occDsc[arr[i]] - i);
-		ascCount += abs(occAsc[arr[i]] - i);
-	}
-
 	int pos = 0;
 
 	for (auto const& [key, val] : occAsc) {
 		if (val != pos) {
-			occAsc[key] = pos;
 			occAsc[findPos(occAsc, pos)] = val;
+			occAsc[key] = pos;
 			ascCount += 1;
 		}
 		pos++;
@@ -47,7 +41,6 @@ int LilysHomework::lilysHomework(vector<int> arr)
 
 	for (auto const& [key, val] : occDsc) {
 		if (val != pos) {
-			occDsc[key] = pos;
 			//occDsc[findPos(occDsc, pos)] = val;
 			map<int, int, greater<int>>::iterator it = occDsc.begin();
 
@@ -60,11 +53,12 @@ int LilysHomework::lilysHomework(vector<int> arr)
 			}
 
 			if(ans > 0) occDsc[ans] = val;
+			occDsc[key] = pos;
 
 			dscCount += 1;
 		}
 		pos++;
 	}
 
-	return dscCount > ascCount ? ascCount / 2 : dscCount / 2;
+	return dscCount > ascCount ? ascCount : dscCount;
 }
