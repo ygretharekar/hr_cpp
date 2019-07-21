@@ -8,7 +8,7 @@ int main()
 {
 	LilysHomework sol = LilysHomework();
 
-	std::vector<int> inp{2, 5, 3, 1};
+	std::vector<int> inp{3, 4, 2, 5, 1};
 
 	cout << sol.lilysHomework(inp) << std::endl;
 
