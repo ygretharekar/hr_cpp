@@ -2,63 +2,40 @@
 
 int LilysHomework::lilysHomework(vector<int> arr)
 {
-	map<int, int> occAsc;
-	map<int, int, greater<int>> occDsc;
+	map<int, int> mp1, mp2;
 
-	for (size_t i = 0; i < arr.size(); i++) {
-		occAsc[arr[i]] = i;
-		occDsc[arr[i]] = i;
+	int a_size = arr.size();
+
+	vector<vector<int>> lists(3, vector<int>(a_size, 0));
+
+	int a_count = 0, d_count = 0;
+
+	for (size_t i = 0; i < a_size; i++)
+	{
+		lists[0][i] = lists[1][i] = lists[2][i] = arr[i];
+		mp1[arr[i]] = i;
 	}
 
-	int dscCount, ascCount;
+	mp2 = mp1;
 
-	ascCount = dscCount = 0;
+	sort(lists[0].begin(), lists[0].end());
 
-	auto findPos = [](map<int, int> mp, int pos) -> int {
-		map<int, int>::iterator it = mp.begin();
+	for (size_t i = 0; i < a_size; i++)
+	{
 
-		while (it != mp.end())
-		{
-			if (it->second == pos) return it->first;
-			it++;
+		if (lists[0][i] != lists[1][i]) {
+			a_count++;
+			int tmp = lists[1][i];
+			swap(lists[1][i], lists[1][mp1[lists[0][i]]]);
+			mp1[tmp] = mp1[lists[0][i]];
 		}
-
-		return -1;
-	};
-
-	int pos = 0;
-
-	for (auto const& [key, val] : occAsc) {
-		if (val != pos) {
-			occAsc[findPos(occAsc, pos)] = val;
-			occAsc[key] = pos;
-			ascCount += 1;
+		if (lists[0][a_size - i - 1] != lists[2][i]) {
+			d_count++;
+			int tmp = lists[2][i];
+			swap(lists[2][i], lists[2][mp2[lists[0][a_size - i - 1]]]);
+			mp2[tmp] = mp2[lists[0][a_size - i - 1]];
 		}
-		pos++;
 	}
 
-	pos = 0;
-
-	for (auto const& [key, val] : occDsc) {
-		if (val != pos) {
-			//occDsc[findPos(occDsc, pos)] = val;
-			map<int, int, greater<int>>::iterator it = occDsc.begin();
-
-			int ans = -1;
-
-			while (it != occDsc.end())
-			{
-				if (it->second == pos) ans = it->first;
-				it++;
-			}
-
-			if(ans > 0) occDsc[ans] = val;
-			occDsc[key] = pos;
-
-			dscCount += 1;
-		}
-		pos++;
-	}
-
-	return dscCount > ascCount ? ascCount : dscCount;
+	return min(a_count, d_count);
 }
