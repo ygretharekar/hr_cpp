@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\serach">
+      <UniqueIdentifier>{d2ee2e13-a854-4d4f-a1b2-90275ee06ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\serach\medium">
+      <UniqueIdentifier>{d4d76ba5-7f79-49e8-ad63-6576ed92f6b8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hr_cpp.cpp">
@@ -27,6 +33,9 @@
     <ClCompile Include="LilysHomework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HackerlandRadioTransmitters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FullCountingSort.h">
@@ -36,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LilysHomework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HackerlandRadioTransmitters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

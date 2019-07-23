@@ -154,12 +154,14 @@
   <ItemGroup>
     <ClCompile Include="FraudulentActivityNotifier.cpp" />
     <ClCompile Include="FullCountingSort.cpp" />
+    <ClCompile Include="HackerlandRadioTransmitters.cpp" />
     <ClCompile Include="hr_cpp.cpp" />
     <ClCompile Include="LilysHomework.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FraudulentActivityNotifier.h" />
     <ClInclude Include="FullCountingSort.h" />
+    <ClInclude Include="HackerlandRadioTransmitters.h" />
     <ClInclude Include="LilysHomework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
