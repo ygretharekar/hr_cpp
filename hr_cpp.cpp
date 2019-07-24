@@ -2,15 +2,15 @@
 //
 
 #include <iostream>
-#include "LilysHomework.h"
+#include "HackerlandRadioTransmitters.h"
 
 int main()
 {
-	LilysHomework sol = LilysHomework();
+	HackerlandRadioTransmitters sol = HackerlandRadioTransmitters();
 
-	std::vector<int> inp{3, 4, 2, 5, 1};
+	std::vector<int> inp{7, 2, 4, 6, 5, 9, 12, 11};
 
-	cout << sol.lilysHomework(inp) << std::endl;
+	cout << sol.hackerlandRadioTransmitters(inp, 2) << std::endl;
 
     std::cout << "Hello World!\n";
 }
