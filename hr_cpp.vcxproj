@@ -154,6 +154,7 @@
   <ItemGroup>
     <ClCompile Include="FraudulentActivityNotifier.cpp" />
     <ClCompile Include="FullCountingSort.cpp" />
+    <ClCompile Include="GridlandMetro.cpp" />
     <ClCompile Include="HackerlandRadioTransmitters.cpp" />
     <ClCompile Include="hr_cpp.cpp" />
     <ClCompile Include="LilysHomework.cpp" />
@@ -161,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="FraudulentActivityNotifier.h" />
     <ClInclude Include="FullCountingSort.h" />
+    <ClInclude Include="GridlandMetro.h" />
     <ClInclude Include="HackerlandRadioTransmitters.h" />
     <ClInclude Include="LilysHomework.h" />
   </ItemGroup>
