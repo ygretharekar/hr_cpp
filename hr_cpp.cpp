@@ -2,15 +2,19 @@
 //
 
 #include <iostream>
-#include "HackerlandRadioTransmitters.h"
+#include "GridlandMetro.h"
 
 int main()
 {
-	HackerlandRadioTransmitters sol = HackerlandRadioTransmitters();
+	GridlandMetro sol = GridlandMetro();
 
-	std::vector<int> inp{7, 2, 4, 6, 5, 9, 12, 11};
+	std::vector<vector<int>> inp{ 
+		vector<int>{2, 2, 3},
+		vector<int>{3, 1, 4},
+		vector<int>{4, 4, 4}
+	};
 
-	cout << sol.hackerlandRadioTransmitters(inp, 2) << std::endl;
+	cout << sol.gridlandMetro(4, 4, 3, inp) << std::endl;
 
     std::cout << "Hello World!\n";
 }
