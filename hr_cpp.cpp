@@ -10,6 +10,7 @@ int main()
 
 	std::vector<vector<int>> inp{ 
 		vector<int>{2, 2, 3},
+		vector<int>{1, 1, 4},
 		vector<int>{3, 1, 4},
 		vector<int>{4, 4, 4}
 	};
