@@ -8,6 +8,8 @@ int main()
 {
 	GridlandMetro sol = GridlandMetro();
 
+
+
 	std::vector<vector<int>> inp{ 
 		vector<int>{2, 2, 3},
 		vector<int>{1, 1, 4},
