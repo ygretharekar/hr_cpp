@@ -2,33 +2,56 @@
 
 int GridlandMetro::gridlandMetro(int n, int m, int k, vector<vector<int>> track)
 {
-	map<int, pair<int, pair<int, int>>> posts;
+	map<int, vector<pair<int, int>>> grids;
 
 	int ans = 0;
 
 	for (vector<int> i: track) {
-		if (posts.count(i[0])) {
-			if (posts[i[0]].second.first > i[1]) {
-				posts[i[0]].first += posts[i[0]].second.first - i[1];
-				posts[i[0]].second.first = i[1];
-			}
-			if (posts[i[0]].second.second < i[2]) {
-				posts[i[0]].first += i[2] - posts[i[0]].second.second;
-				posts[i[0]].second.second = i[2];
-			}
+		if (grids.find(i[0]) == grids.end())
+		{
+			grids[i[0]] = vector<pair<int, int>>{make_pair(i[1], i[2])};
 		}
 		else {
-			posts[i[0]].first = i[2] - i[1] + 1;
-			posts[i[0]].second.first = i[1];
-			posts[i[0]].second.second = i[2];
+			if (i[2] < grids[i[0]][0].first)
+			{
+				grids[i[0]].insert(grids[i[0]].begin(), make_pair(i[1], i[2]));
+				continue;
+			}
+			else if (grids[i[0]][grids[i[0]].size() - 1].second < i[1])
+			{
+				grids[i[0]].push_back(make_pair(i[1], i[2]));
+				continue;
+			}
+			int high = grids[i[0]].size() - 1, low = 0;
+
+			while (low < grids[i[0]].size() && grids[i[0]][low].second < i[1])
+			{
+				low++;
+			}
+			while (high >= 0 && grids[i[0]][high].first > i[2])
+			{
+				high--;
+			}
+
+			int minimum = min(i[1], grids[i[0]][low].first),
+				maximum = max(i[2], grids[i[0]][high].second);
+
+			grids[i[0]].erase(grids[i[0]].begin() + low, grids[i[0]].begin() + high + 1);
+			grids[i[0]].insert(grids[i[0]].begin() + low, make_pair(
+				minimum,
+				maximum
+			));
 		}
 	}
 
-	ans = (n - posts.size())*m;
+	long long total = (long long)m * n;
 
-	for (pair<int, pair<int, pair<int, int>>> i: posts) {
-		ans += (m - i.second.first);
+	for (pair<int, vector<pair<int, int>>> i: grids) {
+		for (pair<int, int> j: i.second) {
+			int len = j.second - j.first + 1;
+			total -= (long long)len;
+		}
 	}
 
-	return ans;
+	return (int)total;
 }
