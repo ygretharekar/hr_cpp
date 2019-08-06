@@ -160,6 +160,7 @@
     <ClCompile Include="KnightLOnAChessboard.cpp" />
     <ClCompile Include="LilysHomework.cpp" />
     <ClCompile Include="MinimumLoss.cpp" />
+    <ClCompile Include="Pairs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FraudulentActivityNotifier.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="KnightLOnAChessboard.h" />
     <ClInclude Include="LilysHomework.h" />
     <ClInclude Include="MinimumLoss.h" />
+    <ClInclude Include="Pairs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,16 +2,16 @@
 //
 
 #include <iostream>
-#include "KnightLOnAChessboard.h"
+#include "Pairs.h"
 
 
 int main()
 {
-	KnightLOnAChessboard sol = KnightLOnAChessboard();
+	Pairs sol = Pairs();
 
-	vector<vector<int>> ans = sol.knightlOnAChessboard(5);
+	int ans = sol.pairs(1, vector<int>(2, 1));
 
-	cout << ans.size() << std::endl;
+	cout << ans << std::endl;
 
     std::cout << "Hello World!\n";
 
