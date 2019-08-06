@@ -2,50 +2,20 @@
 //
 
 #include <iostream>
-#include "GridlandMetro.h"
-
+#include "KnightLOnAChessboard.h"
 
 
 int main()
 {
-	GridlandMetro sol = GridlandMetro();
+	KnightLOnAChessboard sol = KnightLOnAChessboard();
 
-	/*
-	4 5 7
-1 1 2
-1 4 4
-2 1 2
-2 2 3
-2 4 5
-4 1 2
-4 4 5
-	*/
+	vector<vector<int>> ans = sol.knightlOnAChessboard(5);
 
-
-	std::vector<vector<int>> inp{ 
-		//vector<int>{4, 5, 7},
-		vector<int>{1, 1, 2},
-		vector<int>{1, 4, 4},
-		vector<int>{2, 1, 2},
-		vector<int>{2, 2, 3},
-		vector<int>{2, 4, 5},
-		vector<int>{4, 1, 2},
-		vector<int>{4, 4, 5},
-	};
-	//std::vector<vector<int>> inp{ 
-	//	//vector<int>{4, 5, 7},
-	//	vector<int>{1, 3, 6},
-	//	vector<int>{1, 2, 4},
-	//	vector<int>{1, 1, 1},
-	//	vector<int>{1, 7, 7},
-	//	vector<int>{1, 4, 5},
-	//	vector<int>{1, 1, 8},
-	//	//vector<int>{4, 4, 5},
-	//};
-
-	cout << sol.gridlandMetro(4, 5, 7, inp) << std::endl;
+	cout << ans.size() << std::endl;
 
     std::cout << "Hello World!\n";
+
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

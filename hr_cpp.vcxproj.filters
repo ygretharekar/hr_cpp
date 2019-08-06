@@ -39,6 +39,9 @@
     <ClCompile Include="GridlandMetro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="KnightLOnAChessboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FullCountingSort.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GridlandMetro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KnightLOnAChessboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

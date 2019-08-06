@@ -157,6 +157,7 @@
     <ClCompile Include="GridlandMetro.cpp" />
     <ClCompile Include="HackerlandRadioTransmitters.cpp" />
     <ClCompile Include="hr_cpp.cpp" />
+    <ClCompile Include="KnightLOnAChessboard.cpp" />
     <ClCompile Include="LilysHomework.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +165,7 @@
     <ClInclude Include="FullCountingSort.h" />
     <ClInclude Include="GridlandMetro.h" />
     <ClInclude Include="HackerlandRadioTransmitters.h" />
+    <ClInclude Include="KnightLOnAChessboard.h" />
     <ClInclude Include="LilysHomework.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
