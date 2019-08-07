@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConnectedCellsInAGrid.cpp" />
     <ClCompile Include="FraudulentActivityNotifier.cpp" />
     <ClCompile Include="FullCountingSort.cpp" />
     <ClCompile Include="GridlandMetro.cpp" />
@@ -163,6 +164,7 @@
     <ClCompile Include="Pairs.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConnectedCellsInAGrid.h" />
     <ClInclude Include="FraudulentActivityNotifier.h" />
     <ClInclude Include="FullCountingSort.h" />
     <ClInclude Include="GridlandMetro.h" />

@@ -2,14 +2,22 @@
 //
 
 #include <iostream>
-#include "Pairs.h"
+#include "ConnectedCellsInAGrid.h"
 
 
 int main()
 {
-	Pairs sol = Pairs();
+	ConnectedCellsInAGrid sol = ConnectedCellsInAGrid();
 
-	int ans = sol.pairs(1, vector<int>(2, 1));
+	int ans = sol.connectedCell(
+		vector<vector<int>> {
+			vector<int>{1, 1, 0, 0, 0},
+			vector<int>{0, 1, 1, 0, 0},
+			vector<int>{0, 0, 1, 0, 1},
+			vector<int>{1, 0, 0, 0, 1},
+			vector<int>{0, 1, 0, 1, 1}
+		}
+	);
 
 	cout << ans << std::endl;
 
