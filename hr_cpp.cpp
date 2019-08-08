@@ -2,22 +2,14 @@
 //
 
 #include <iostream>
-#include "ConnectedCellsInAGrid.h"
+#include "ShortPalindrome.h"
 
 
 int main()
 {
-	ConnectedCellsInAGrid sol = ConnectedCellsInAGrid();
+	ShortPalindrome sol = ShortPalindrome();
 
-	int ans = sol.connectedCell(
-		vector<vector<int>> {
-			vector<int>{1, 1, 0, 0, 0},
-			vector<int>{0, 1, 1, 0, 0},
-			vector<int>{0, 0, 1, 0, 1},
-			vector<int>{1, 0, 0, 0, 1},
-			vector<int>{0, 1, 0, 1, 1}
-		}
-	);
+	int ans = sol.shortPalindrome("ghhggh");
 
 	cout << ans << std::endl;
 

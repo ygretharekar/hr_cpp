@@ -162,6 +162,7 @@
     <ClCompile Include="LilysHomework.cpp" />
     <ClCompile Include="MinimumLoss.cpp" />
     <ClCompile Include="Pairs.cpp" />
+    <ClCompile Include="ShortPalindrome.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConnectedCellsInAGrid.h" />
@@ -173,6 +174,7 @@
     <ClInclude Include="LilysHomework.h" />
     <ClInclude Include="MinimumLoss.h" />
     <ClInclude Include="Pairs.h" />
+    <ClInclude Include="ShortPalindrome.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
