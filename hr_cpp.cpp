@@ -2,14 +2,22 @@
 //
 
 #include <iostream>
-#include "ShortPalindrome.h"
+#include "CountLuck.h"
 
 
 int main()
 {
-	ShortPalindrome sol = ShortPalindrome();
+	CountLuck sol = CountLuck();
 
-	int ans = sol.shortPalindrome("ghhggh");
+	string ans = sol.countLuck(
+		vector<string> {
+			".X.X......X",
+			".X* .X.XXX.X",
+			".XX.X.XM...",
+			"......XXXX."
+		},
+		3
+	);
 
 	cout << ans << std::endl;
 
