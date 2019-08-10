@@ -9,15 +9,32 @@ int main()
 {
 	CountLuck sol = CountLuck();
 
+	/*string ans = sol.countLuck(
+		vector<string> {
+			"*M....",
+			".X.X.X",
+			"XXX...",
+		},
+		3
+	);*/
 	string ans = sol.countLuck(
 		vector<string> {
-			".X.X......X",
-			".X* .X.XXX.X",
-			".XX.X.XM...",
-			"......XXXX."
+			"*.....",
+			".X.X.X",
+			"XXX.M.",
 		},
 		3
 	);
+	/*string ans = sol.countLuck(
+		vector<string> {
+			"XXXXXXXXXXXXXXXXX",
+			"XXX.XX.XXXXXXXXXX",
+			"XX.*..M.XXXXXXXXX",
+			"XXX.XX.XXXXXXXXXX",
+			"XXXXXXXXXXXXXXXXX",
+		},
+		3
+	);*/
 
 	cout << ans << std::endl;
 
