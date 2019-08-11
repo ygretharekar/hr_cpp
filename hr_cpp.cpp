@@ -19,9 +19,10 @@ int main()
 	);*/
 	string ans = sol.countLuck(
 		vector<string> {
-			"*.....",
-			".X.X.X",
-			"XXX.M.",
+			".X.X......X",
+			".X*.X.XXX.X",
+			".XX.X.XM...",
+			"......XXXX."
 		},
 		3
 	);

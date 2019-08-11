@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "CountLuck.h"
 
 string CountLuck::countLuck(vector<string> matrix, int k)
@@ -18,18 +19,19 @@ string CountLuck::countLuck(vector<string> matrix, int k)
 
 	int ans = wand(matrix, start_i, start_j, matrix.size(), matrix[0].length());
 
-	return ans == k ? "Impressed": "Oops!";
+	return cnt == k ? "Impressed": "Oops!";
 }
 
-int CountLuck::wand(vector<string> &matrix, int s_i, int s_j, int n, int m)
+bool CountLuck::wand(vector<string> &matrix, int s_i, int s_j, int n, int m)
 {
 	if (matrix[s_i][s_j] == '*')
 	{
-		found = true;
-		return 0;
+		return true;
 	}
 
 	int count = 0, ans = 0;
+
+	bool f = false;
 
 	matrix[s_i][s_j] = 'X';
 
@@ -37,13 +39,15 @@ int CountLuck::wand(vector<string> &matrix, int s_i, int s_j, int n, int m)
 	{
 		if (canGo(matrix, s_i + tb[i], s_j + rl[i], n, m))
 		{
-			count += wand(matrix, s_i + tb[i], s_j + rl[i], n, m);
+			//count += wand(matrix, s_i + tb[i], s_j + rl[i], n, m);
+			f = f || wand(matrix, s_i + tb[i], s_j + rl[i], n, m);
 			ans++;
 		}
 	}
 
-	if (found) return ans > 1 ? count + 1 : count;
-	else return 0;
+	//if (found) return ans > 1 ? count + 1 : count;
+	if (f && ans > 1) cnt++;
+	return f;
 }
 
 bool CountLuck::canGo(vector<string>& matrix, int s_i, int s_j, int n, int m)

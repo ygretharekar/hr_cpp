@@ -176,7 +176,12 @@
     <ClInclude Include="LilysHomework.h" />
     <ClInclude Include="MinimumLoss.h" />
     <ClInclude Include="Pairs.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="ShortPalindrome.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="hr_cpp.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
