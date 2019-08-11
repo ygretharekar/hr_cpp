@@ -57,6 +57,9 @@
     <ClCompile Include="CountLuck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CutTheTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FullCountingSort.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CutTheTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

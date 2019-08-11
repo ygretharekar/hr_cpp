@@ -2,40 +2,24 @@
 //
 
 #include <iostream>
-#include "CountLuck.h"
+#include "CutTheTree.h"
 
 
 int main()
 {
-	CountLuck sol = CountLuck();
+	CutTheTree sol = CutTheTree();
 
-	/*string ans = sol.countLuck(
-		vector<string> {
-			"*M....",
-			".X.X.X",
-			"XXX...",
-		},
-		3
-	);*/
-	string ans = sol.countLuck(
-		vector<string> {
-			".X.X......X",
-			".X*.X.XXX.X",
-			".XX.X.XM...",
-			"......XXXX."
-		},
-		3
-	);
-	/*string ans = sol.countLuck(
-		vector<string> {
-			"XXXXXXXXXXXXXXXXX",
-			"XXX.XX.XXXXXXXXXX",
-			"XX.*..M.XXXXXXXXX",
-			"XXX.XX.XXXXXXXXXX",
-			"XXXXXXXXXXXXXXXXX",
-		},
-		3
-	);*/
+	vector<int> data{100, 200, 100, 500, 100, 600};
+
+	vector<vector<int>> edges{
+		vector<int>{1, 2},
+		vector<int>{2, 3},
+		vector<int>{2, 5},
+		vector<int>{4, 5},
+		vector<int>{5, 6}
+	};
+
+	int ans = sol.cutTheTree(data, edges);
 
 	cout << ans << std::endl;
 
