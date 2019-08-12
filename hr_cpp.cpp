@@ -2,24 +2,14 @@
 //
 
 #include <iostream>
-#include "CutTheTree.h"
+#include "GenaPlayingHanoi.h"
 
 
 int main()
 {
-	CutTheTree sol = CutTheTree();
+	GenaPlayingHanoi sol = GenaPlayingHanoi();
 
-	vector<int> data{100, 200, 100, 500, 100, 600};
-
-	vector<vector<int>> edges{
-		vector<int>{1, 2},
-		vector<int>{2, 3},
-		vector<int>{2, 5},
-		vector<int>{4, 5},
-		vector<int>{5, 6}
-	};
-
-	int ans = sol.cutTheTree(data, edges);
+	int ans = sol.genaPlayingHanoi(3, vector<int>{1, 4, 1});
 
 	cout << ans << std::endl;
 

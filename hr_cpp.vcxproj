@@ -157,6 +157,7 @@
     <ClCompile Include="CutTheTree.cpp" />
     <ClCompile Include="FraudulentActivityNotifier.cpp" />
     <ClCompile Include="FullCountingSort.cpp" />
+    <ClCompile Include="GenaPlayingHanoi.cpp" />
     <ClCompile Include="GridlandMetro.cpp" />
     <ClCompile Include="HackerlandRadioTransmitters.cpp" />
     <ClCompile Include="hr_cpp.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="CutTheTree.h" />
     <ClInclude Include="FraudulentActivityNotifier.h" />
     <ClInclude Include="FullCountingSort.h" />
+    <ClInclude Include="GenaPlayingHanoi.h" />
     <ClInclude Include="GridlandMetro.h" />
     <ClInclude Include="HackerlandRadioTransmitters.h" />
     <ClInclude Include="KnightLOnAChessboard.h" />
