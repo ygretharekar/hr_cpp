@@ -21,7 +21,7 @@ int GenaPlayingHanoi::getMin(int n, unsigned state)
 	queue<unsigned> topdiscs;
 	unsigned win = 0;
 	if (state == win) return 0;
-	vector<unsigned> depth(1<<(2*n), 0);
+	vector<unsigned> depth((long)1<<(2*n), 0);
 
 	topdiscs.push(state);
 
@@ -32,7 +32,7 @@ int GenaPlayingHanoi::getMin(int n, unsigned state)
 		int d[4] = {};
 		for (size_t i = 0; i < 4; i++)
 		{
-			d[i] = getDisc();
+			//d[i] = getDisc();
 		}
 	}
 	return 0;
