@@ -2,7 +2,15 @@
 
 int GenaPlayingHanoi::genaPlayingHanoi(int n, vector<int> a)
 {
-	return 0;
+	unsigned state = 0;
+
+	for (size_t i = 0; i < n; i++)
+	{
+		int rod = a[i];
+		state = move(state, i, --rod);
+	}
+	int ans = getMin(n, state);
+	return ans;
 }
 
 unsigned GenaPlayingHanoi::move(unsigned state, int disc, int rod)
@@ -13,7 +21,12 @@ unsigned GenaPlayingHanoi::move(unsigned state, int disc, int rod)
 int GenaPlayingHanoi::getDisc(int rod, int n, unsigned state)
 {
 	int disc = n + 1;
-	return 3 & state >> 2*n;
+	for (int i = n; i >= 0; i--)
+	{
+		unsigned r = 3 & state >> 2 * i;
+		if (r == rod) disc = i;
+	}
+	return disc;
 }
 
 int GenaPlayingHanoi::getMin(int n, unsigned state)
@@ -21,7 +34,7 @@ int GenaPlayingHanoi::getMin(int n, unsigned state)
 	queue<unsigned> topdiscs;
 	unsigned win = 0;
 	if (state == win) return 0;
-	vector<unsigned> depth((long)1<<(2*n), 0);
+	vector<unsigned> depth(1<<(2*n), 0);
 
 	topdiscs.push(state);
 
@@ -32,8 +45,25 @@ int GenaPlayingHanoi::getMin(int n, unsigned state)
 		int d[4] = {};
 		for (size_t i = 0; i < 4; i++)
 		{
-			//d[i] = getDisc();
+			d[i] = getDisc(i, n, s);
+		}
+		for (size_t i = 0; i < 4; i++)
+		{
+			if (getDisc(i, n, s) == n + 1) continue;
+			for (size_t j = 0; j < 4; j++)
+			{
+				if (d[i] < d[j])
+				{
+					unsigned n_s = move(s, d[i], j);
+					if (n_s == 0) return depth[s] + 1;
+					if (!depth[n_s] && n_s != state)
+					{
+						depth[n_s] = 1 + depth[s];
+						topdiscs.push(n_s);
+					}
+				}
+			}
 		}
 	}
-	return 0;
+	return -1;
 }
