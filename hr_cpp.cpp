@@ -9,7 +9,7 @@ int main()
 {
 	GenaPlayingHanoi sol = GenaPlayingHanoi();
 
-	int ans = sol.genaPlayingHanoi(3, vector<int>{1, 4, 1});
+	int ans = sol.genaPlayingHanoi(4, vector<int>{2, 4, 4, 4});
 
 	cout << ans << std::endl;
 

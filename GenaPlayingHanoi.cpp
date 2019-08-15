@@ -20,10 +20,10 @@ unsigned GenaPlayingHanoi::move(unsigned state, int disc, int rod)
 
 int GenaPlayingHanoi::getDisc(int rod, int n, unsigned state)
 {
-	int disc = n + 1;
-	for (int i = n; i >= 0; i--)
+	int disc = n;
+	for (int i = n-1; i >= 0; i--)
 	{
-		unsigned r = 3 & state >> 2 * i;
+		unsigned r = 3 & state >> 2 * (i);
 		if (r == rod) disc = i;
 	}
 	return disc;
@@ -49,7 +49,7 @@ int GenaPlayingHanoi::getMin(int n, unsigned state)
 		}
 		for (size_t i = 0; i < 4; i++)
 		{
-			if (getDisc(i, n, s) == n + 1) continue;
+			if (getDisc(i, n, s) == n) continue;
 			for (size_t j = 0; j < 4; j++)
 			{
 				if (d[i] < d[j])
