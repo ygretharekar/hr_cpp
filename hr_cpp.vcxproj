@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BeutifulQuadruples.cpp" />
     <ClCompile Include="ConnectedCellsInAGrid.cpp" />
     <ClCompile Include="CountLuck.cpp" />
     <ClCompile Include="CutTheTree.cpp" />
@@ -168,6 +169,7 @@
     <ClCompile Include="ShortPalindrome.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BeutifulQuadruples.h" />
     <ClInclude Include="ConnectedCellsInAGrid.h" />
     <ClInclude Include="CountLuck.h" />
     <ClInclude Include="CutTheTree.h" />

@@ -2,14 +2,14 @@
 //
 
 #include <iostream>
-#include "GenaPlayingHanoi.h"
+#include "BeutifulQuadruples.h"
 
 
 int main()
 {
-	GenaPlayingHanoi sol = GenaPlayingHanoi();
+	BeutifulQuadruples sol = BeutifulQuadruples();
 
-	int ans = sol.genaPlayingHanoi(4, vector<int>{2, 4, 4, 4});
+	int ans = sol.beautifulQuadruples(1, 2, 3, 4);
 
 	cout << ans << std::endl;
 

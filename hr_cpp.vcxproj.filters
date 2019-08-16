@@ -63,6 +63,9 @@
     <ClCompile Include="GenaPlayingHanoi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BeutifulQuadruples.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FullCountingSort.h">
@@ -108,6 +111,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GenaPlayingHanoi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BeutifulQuadruples.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
