@@ -7,29 +7,38 @@ int BeutifulQuadruples::beautifulQuadruples(int a, int b, int c, int d)
 
 	int acc = 0;
 
-	vector<long> cnt(pow(2, ceil(log2(bq[3] + 1))));
+	vector<vector<int>> cnt(bq[3] + 1, vector<int>(pow(2, ceil(log2(bq[3] + 1)))));
+	vector<int> total(bq[3] + 1);
 
 	for (size_t i = 1; i <= bq[0]; i++)
 	{
 		for(size_t j = i; j <= bq[1]; j++)
 		{
-			cnt[i ^ j]++;
-			acc++;
+			cnt[j][i ^ j]++;
+			total[j]++;
 		}
 	}
 
+	for (size_t i = 0; i < pow(2, ceil(log2(bq[3] + 1))); i++)
+	{
+		for (size_t j = 1; j <= bq[3]; j++)
+		{
+			cnt[j][i] += cnt[j - 1][i];
+		}
+	}
 
+	for (size_t i = 1; i <= bq[3]; i++)
+	{
+			total[i] += total[i - 1];
+	}
 
-	S
 	int result = 0;
-	int copies = 0;
 
 	for (size_t i = 1; i <= bq[2]; i++)
 	{
-		for(size_t j = i; j <= bq[3]; j++)
+		for (size_t j = i; j <= bq[3]; j++)
 		{
-			result += (acc - cnt[i ^ j] - copies);
-			copies++;
+			result += (total[i] - cnt[i][i^j]);
 		}
 	}
 
