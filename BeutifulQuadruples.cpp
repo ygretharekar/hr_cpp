@@ -7,8 +7,8 @@ int BeutifulQuadruples::beautifulQuadruples(int a, int b, int c, int d)
 
 	int acc = 0;
 
-	vector<vector<int>> cnt(bq[3] + 1, vector<int>(pow(2, ceil(log2(bq[3] + 1)))));
-	vector<int> total(bq[3] + 1);
+	vector<vector<long>> cnt(bq[3] + 1, vector<long>(pow(2, ceil(log2(bq[3] + 1)))));
+	vector<long> total(bq[3] + 1);
 
 	for (size_t i = 1; i <= bq[0]; i++)
 	{
