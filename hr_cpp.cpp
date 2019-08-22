@@ -2,14 +2,15 @@
 //
 
 #include <iostream>
-#include "BeutifulQuadruples.h"
+#include "PrintShortestPath.h"
 
 
 int main()
 {
-	BeutifulQuadruples sol = BeutifulQuadruples();
+	PrintShortestPath sol = PrintShortestPath();
 
-	int ans = sol.beautifulQuadruples(1, 2, 3, 4);
+	int ans = 0;
+	sol.printShortestPath(7, 6, 6, 0, 1);
 
 	cout << ans << std::endl;
 
