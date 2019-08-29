@@ -10,7 +10,7 @@ int main()
 	PrintShortestPath sol = PrintShortestPath();
 
 	int ans = 0;
-	sol.printShortestPath(7, 6, 6, 0, 1);
+	sol.printShortestPath(6, 5, 1, 0, 5);
 
 	cout << ans << std::endl;
 
