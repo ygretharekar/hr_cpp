@@ -2,19 +2,23 @@
 //
 
 #include <iostream>
-#include "PrintShortestPath.h"
+#include "RoadsAndLibraries.h"
 
 
 int main()
 {
-	PrintShortestPath sol = PrintShortestPath();
+	RoadsAndLibraries sol = RoadsAndLibraries();
 
-	int ans = 0;
-	sol.printShortestPath(6, 5, 1, 0, 5);
-
-
-
-
+	long ans = 0;
+	
+	ans = sol.roadsAndLibraries(
+		3, 2, 1,
+		vector{
+			vector<int>{1, 2},
+			vector<int>{3, 1},
+			vector<int>{2, 3}
+		}
+	);
 
 	cout << ans << std::endl;
 

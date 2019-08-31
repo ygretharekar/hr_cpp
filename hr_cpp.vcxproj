@@ -167,6 +167,7 @@
     <ClCompile Include="MinimumLoss.cpp" />
     <ClCompile Include="Pairs.cpp" />
     <ClCompile Include="PrintShortestPath.cpp" />
+    <ClCompile Include="RoadsAndLibraries.cpp" />
     <ClCompile Include="ShortPalindrome.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +187,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PrintShortestPath.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="RoadsAndLibraries.h" />
     <ClInclude Include="ShortPalindrome.h" />
   </ItemGroup>
   <ItemGroup>
