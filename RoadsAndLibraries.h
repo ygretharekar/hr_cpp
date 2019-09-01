@@ -3,6 +3,7 @@
 #include<map>
 #include<string>
 #include<queue>
+#include<stack>
 #include<algorithm>
 #include<cmath>
 #include<iostream>
