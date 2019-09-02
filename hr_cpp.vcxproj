@@ -162,6 +162,7 @@
     <ClCompile Include="GridlandMetro.cpp" />
     <ClCompile Include="HackerlandRadioTransmitters.cpp" />
     <ClCompile Include="hr_cpp.cpp" />
+    <ClCompile Include="JourneyToTheMoon.cpp" />
     <ClCompile Include="KnightLOnAChessboard.cpp" />
     <ClCompile Include="LilysHomework.cpp" />
     <ClCompile Include="MinimumLoss.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="GenaPlayingHanoi.h" />
     <ClInclude Include="GridlandMetro.h" />
     <ClInclude Include="HackerlandRadioTransmitters.h" />
+    <ClInclude Include="JourneyToTheMoon.h" />
     <ClInclude Include="KnightLOnAChessboard.h" />
     <ClInclude Include="LilysHomework.h" />
     <ClInclude Include="MinimumLoss.h" />

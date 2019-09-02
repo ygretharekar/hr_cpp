@@ -19,6 +19,12 @@
     <Filter Include="Source Files\serach\medium">
       <UniqueIdentifier>{d4d76ba5-7f79-49e8-ad63-6576ed92f6b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GraphTheory">
+      <UniqueIdentifier>{ededdea3-fd6e-4641-be8a-7d0c9f4586c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GraphTheory\Medium">
+      <UniqueIdentifier>{20169182-8bd1-4e96-a2b2-d95346ab0c6d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hr_cpp.cpp">
@@ -70,6 +76,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RoadsAndLibraries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="JourneyToTheMoon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -126,6 +135,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RoadsAndLibraries.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JourneyToTheMoon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

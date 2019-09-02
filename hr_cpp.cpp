@@ -2,23 +2,16 @@
 //
 
 #include <iostream>
-#include "RoadsAndLibraries.h"
+#include "JourneyToTheMoon.h"
 
 
 int main()
 {
-	RoadsAndLibraries sol = RoadsAndLibraries();
+	JourneyToTheMoon sol = JourneyToTheMoon();
 
 	long ans = 0;
 	
-	ans = sol.roadsAndLibraries(
-		3, 2, 1,
-		vector{
-			vector<int>{1, 2},
-			vector<int>{3, 1},
-			vector<int>{2, 3}
-		}
-	);
+	ans = sol.journeyToMoon(5, vector<vector<int>>{vector<int>{0, 1}, vector<int>{2, 3}, vector<int>{0, 4}});
 
 	cout << ans << std::endl;
 
