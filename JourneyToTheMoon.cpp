@@ -47,7 +47,20 @@ int JourneyToTheMoon::journeyToMoon(int n, vector<vector<int>> astronaut)
 		count[j++] = p.second;
 	}
 
+	long combi = 0;
 
+	for (size_t i = 0; i < count.size(); i++)
+	{
+		for (size_t k = i + 1; k < count.size(); k++)
+		{
+			combi += count[i] * count[k];
+		}
+	}
 
-	return 0;
+	if (alone)
+	{
+		combi += (alone * (n - alone)) + ((alone)*(alone - 1)/2);
+	}
+
+	return combi;
 }
